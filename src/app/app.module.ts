@@ -11,6 +11,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
+import { CuatroComponent } from './components/cuatro/cuatro.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { SobremiComponent } from './components/sobremi/sobremi.component';
     EducacionComponent,
     ExperienciaComponent,
     HeaderComponent,
-    SobremiComponent
+    SobremiComponent,
+    CuatroComponent,
+    HomeComponent
   ],
   imports: [
     HttpClientModule,
