@@ -12,6 +12,7 @@ import { SobremiComponent } from './components/sobremi/sobremi.component';
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'home',component: HomeComponent},
+  {path:'modal',component: ModalComponent},
   {path:'**', component: CuatroComponent},
 
 ];
