@@ -15,7 +15,15 @@
 
 {
     "institucion": "Instituto Modelo Manuel Belgrano 1995 / 1997",
-    "titulo": "Analista Programador / Promedio 8.33",
+    "titulo": "Analista Programador Junior / Promedio 8.33",
     "detalle": "Carrera terciaria de 2 años en programación Visual Basic"
+},
+
+{
+    "institucion": "Instituto Modelo Manuel Belgrano 1995 / 1997",
+    "titulo": "Perito Mercantil Orientado en Computación / Promedio 9.33",
+    "detalle": "Secundario Completo"
 }
+
+
 ]

@@ -10,7 +10,7 @@ import { ModalComponent } from './components/modal/modal.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
+  {path:'', redirectTo: 'home', pathMatch: 'full'},
   {path:'home',component: HomeComponent},
   {path:'modal',component: ModalComponent},
   {path:'**', component: CuatroComponent},
