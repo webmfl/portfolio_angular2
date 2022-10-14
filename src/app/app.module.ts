@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { ModalComponent } from './components/modal/modal.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
@@ -34,7 +34,7 @@ import { HomeComponent } from './components/home/home.component';
     
     
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy, useClass:HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
