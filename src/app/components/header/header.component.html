@@ -6,7 +6,16 @@
           <li><a class="nav-link text-white"><h3>Mi Portfolio | Martín Lazo</h3></a></li>
         </ul>
         <div class="text-end">
-          <button type="button" id="btnLogin" class="btn btn-outline-light me-2" routerLink="/modal">Login</button>
+          <a *ngIf="isLogged"> 
+            <button type="button" id="btnLogin" class="btn btn-outline-light me-2" (click)="logOut()" routerLink="/modal" >Logout</button>
+          </a>
+
+          
+          <a *ngIf="!isLogged">
+            <button type="button" id="btnLogin" class="btn btn-outline-light me-2" routerLink="/modal">Login</button>
+          </a>
+        
+
         </div>
     </div>
     </nav>

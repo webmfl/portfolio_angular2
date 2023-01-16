@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-sobremi',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobremiComponent implements OnInit {
 
-  constructor() { }
+  isLogged = false;
 
-  ngOnInit(): void {
+  constructor(private tokenService: TokenService) { }
+
+  ngOnInit() {
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+
+    }
   }
 
 }

@@ -3,16 +3,34 @@
   <!-- <div class="abs-center"> -->
      <div class="col-6 mx-auto">
       <h5 class="mt-5 mb-3 text-center">Ingreso</h5>
-      <form class="" name="login" >
+      <form [formGroup]="form" class="" name="login" (ngSubmit)="onEnviar($event)">
         <div class="form-floating mb-3">
-          <input type="text" name="usuario" class="form-control rounded-3" id="usuario" placeholder="Usuario" required>
-          <label for="floatingInput">Usuario</label>
+          <!-- Se configura el campo nombreUsuario del form reactivo para que responda a los errores-->
+          <input type="text" formControlName="nombreUsuario" 
+            [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 
+                        'is-valid': !NombreUsuario?.errors && NombreUsuario?.touched}" 
+            name="usuario" class="form-control rounded-3" id="usuario" placeholder="Usuario" required>
+          
+            <label for="floatingInput">Usuario</label>
+          <!-- Se configura el mensaje de error si tiene errores-->
+          <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched ">
+            <p *ngIf="NombreUsuario?.hasError('required')" class="text-danger">El usuario es requerido</p>
+          </div>
         </div>
+
+        <!-- Se configura el campo password del form reactivo para que responda a los errores-->
         <div class="form-floating mb-3">
-          <input type="password" name="pass" class="form-control rounded-3" id="pass" placeholder="Password" required>
+          <input type="password" formControlName="password" 
+            [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
+                        'is-valid': !Password?.errors && !Password?.touched}"
+            name="pass" class="form-control rounded-3" id="pass" placeholder="Password" required>
+
           <label for="floatingPassword">Password</label>
+          <div *ngIf="Password?.errors && Password?.touched ">
+            <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña es requerida</p>
+          </div>
         </div>
-        <input type="button" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" value="Ingresar">
+        <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary">Ingresar</button>
       </form>
   <!-- </div> -->
 </div>
