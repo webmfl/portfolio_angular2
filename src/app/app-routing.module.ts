@@ -14,6 +14,7 @@ const routes: Routes = [
   {path:'home',component: HomeComponent},
   {path:'modal',component: ModalComponent},
   {path:'**', component: CuatroComponent}
+  
 
 ];
 

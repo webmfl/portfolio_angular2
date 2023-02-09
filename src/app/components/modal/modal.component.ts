@@ -58,6 +58,7 @@ export class ModalComponent implements OnInit {
   
 
   onEnviar(event: Event) {
+    
     event.preventDefault;
     this.loginUsuario=new LoginUsuario(this.nombreUsuario, this.password);
     this.autenticacionService.IniciarSesion(this.form.value).subscribe(data => {

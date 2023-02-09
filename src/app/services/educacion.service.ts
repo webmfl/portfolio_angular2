@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EducacionService {
   
-  url = "http://localhost:8080/edu/";
+  url = "https://be-argpro.onrender.com/edu/";
 
   constructor(private http:HttpClient) { }
 
@@ -15,6 +15,8 @@ export class EducacionService {
   //   return this.http.get('./assets/data/edu.json');
   // }
 obtenerDatos():Observable<any> {
+
+  
     
     return this.http.get<any>(this.url+"list")
 

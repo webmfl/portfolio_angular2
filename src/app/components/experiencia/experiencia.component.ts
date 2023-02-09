@@ -16,30 +16,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ExperienciaComponent implements OnInit {
 
-  // experiencia: Experiencia[] = [];
-  // roles: string[];
-  // isAdmin = false;
-  // isLogged = false;
-  form: FormGroup;
   [x: string]: any;
   experiencia: any;
   isLogged = false;
-  constructor(
-    private formBuilder: FormBuilder,
-    private toastr: ToastrService,
-    private autenticacionService: AutenticacionService,
-    private ruta2: Router,
-    private tokenService: TokenService,
-    private datosExperiencia: ExperienciaService
-  ) {
-    // this.form = this.formBuilder.group(
-    //   {
-    //     empresa: ['', [Validators.required]],
-    //     detalle: ['', [Validators.required]],
-    //     periodo: ['', [Validators.required]]
-    //   }
-    // )
-  }
+  constructor(private datosExperiencia: ExperienciaService, 
+              private tokenService: TokenService,
+              private autenticacionService: AutenticacionService,
+              private toastr: ToastrService
+              ) { }
 
   ngOnInit() {
 
@@ -50,52 +34,27 @@ export class ExperienciaComponent implements OnInit {
 
     }
     
+    this.cargarExperiencias();
+    console.log('Aut', this.isLogged);
+  }
+
+  public cargarExperiencias(): void {
     this.datosExperiencia.obtenerDatos().subscribe(data => {
       console.log(data);
       this.experiencia = data;
     });
   }
-  // if (this.tokenService.getToken()) {
-  //   this.isLogged = true;
-  // } else {
-  //   this.isLogged = false;
 
-  //   }
+  borrar(id: number) {
+    
+    
+      
+    this.datosExperiencia.delete(id).subscribe(data=>{
+      
+      this.toastr.success('Eliminado', 'OK', {timeOut: 3000, positionClass: 'toast-top-center'});
+      this.cargarExperiencias();
+    });
+  }
 
-  //   this.cargarExp();
-  //   this.roles = this.tokenService.getAuthorities();
-  //   this.roles.forEach(rol => {
-  //     if (rol === 'ROLE_ADMIN') {
-  //       this.isAdmin = true;
-  //     }
-  //   });
-  // }
-
-  // cargarExp(): void {
-  //   this.datosExperiencia.list().subscribe({
-  //     next: data => {
-  //       this.experiencia = data;
-  //     },
-  //     error: err => {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
-
-  // borrar(id: number) {
-  //   this.datosExperiencia.delete(id).subscribe(data => {
-  //     this.toastr.success('Experiencia eliminada', 'OK', {
-  //       timeOut: 3000, positionClass: "toast-top-center"
-  //     });
-  //     this.cargarExp();
-  //   },
-  //     err => {
-  //       this.toastr.error(err.error.mensaje, 'Fail', {
-  //         timeOut: 3000, positionClass: "toast-top-center"
-  //       });
-  //     });
-
-  // }
-
-
+  
 }

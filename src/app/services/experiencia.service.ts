@@ -8,34 +8,21 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
 
-  url = "http://localhost:8080/exp/";
+  url = "https://be-argpro.onrender.com/exp/";
 
   constructor(private httpClient: HttpClient) { }
 
-  // public list(): Observable<Experiencia[]> {
-  //   return this.httpClient.get<Experiencia[]>(this.url + 'list');
-  // }
+ public nuevo(experiencia: Experiencia):Observable<any> {
+  return this.httpClient.post<any>(this.url + 'nuevo', experiencia);
+ }
 
-  // public detail(id: number): Observable<Experiencia> {
-  //   return this.httpClient.get<Experiencia>(this.url + `detail/${id}`);
-  // }
+ public update(id: number, experiencia: Experiencia):Observable<any> {
+  return this.httpClient.put<any>(this.url + `update/${id}`, experiencia);
+ }
 
-  // public detailEmpresa(empresa: string): Observable<Experiencia> {
-  //   return this.httpClient.get<Experiencia>(this.url + `detailname/${empresa}`);
-  // }
-
-  // public save(experiencia: Experiencia): Observable<any> {
-  //   return this.httpClient.post<any>(this.url + 'nuevo', experiencia);
-  // }
-
-  // public update(id: number, experiencia: Experiencia): Observable<any> {
-  //   return this.httpClient.put<any>(this.url + `update/${id}`, experiencia);
-  // }
-
-  // public delete(id: number): Observable<any> {
-  //   return this.httpClient.delete<any>(this.url + `delete/${id}`);
-  // }
-
+ public delete(id: number):Observable<any> {
+  return this.httpClient.delete<any>(this.url + `delete/${id}`);
+ }
   
   obtenerDatos():Observable<any> {
     

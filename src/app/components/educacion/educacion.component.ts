@@ -11,7 +11,7 @@ export class EducacionComponent implements OnInit {
   [x: string]: any;
   educacion: any;
   isLogged = false;
-  token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY3MzgyNzMzMiwiZXhwIjoxNjczODYzMzMyfQ.cWanI_IE5kTDGvjeyUgbZb052rNX7kt7lltC3_cUu4iFov_ezF4jK-CeLzgN_ZZ2VENgfdd3XIebwZPTYigrFg";
+  
   constructor(private datosEducacion: EducacionService, private tokenService: TokenService ) { }
 
   ngOnInit() {

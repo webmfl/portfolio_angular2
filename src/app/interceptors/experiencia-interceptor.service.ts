@@ -15,7 +15,10 @@ export class ExperienciaInterceptorService implements HttpInterceptor {
     const token=this.tokenService.getToken();
    
     if(token!=null) {
-      intReq=req.clone({headers: req.headers.set('Authorization', 'Bearer' + token)});
+      intReq=req.clone({
+        setHeaders: {
+        authorization: `Bearer ${token}`
+        }});
      
     }
     
