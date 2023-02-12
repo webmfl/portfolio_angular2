@@ -14,8 +14,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
 import { CuatroComponent } from './components/cuatro/cuatro.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 
@@ -32,19 +36,22 @@ import { ToastrModule } from 'ngx-toastr';
     HeaderComponent,
     SobremiComponent,
     CuatroComponent,
-    HomeComponent,
+    HomeComponent
+    
     
 
     
     
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgbModule,
+    FormsModule
     
     
   ],

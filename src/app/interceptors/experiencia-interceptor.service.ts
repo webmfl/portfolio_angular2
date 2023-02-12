@@ -11,6 +11,7 @@ export class ExperienciaInterceptorService implements HttpInterceptor {
   constructor(private tokenService: TokenService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    console.log('http interceptor');
     let intReq= req;
     const token=this.tokenService.getToken();
    

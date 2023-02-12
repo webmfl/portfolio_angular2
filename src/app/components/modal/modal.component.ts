@@ -8,6 +8,7 @@ import { LoginUsuario } from 'src/app/models/login-usuario';
 
 
 
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',

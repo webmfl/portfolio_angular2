@@ -1,9 +1,11 @@
 export class Experiencia {
-    detalle: String;
-    empresa: String;
-    periodo: String;
+    
+    detalle: string;
+    empresa: string;
+    periodo: string;
 
-    constructor(detalle: String, empresa: String, periodo: String) {
+    constructor({ detalle, empresa, periodo }: { detalle: string; empresa: string; periodo: string; }) {
+    
         this.detalle = detalle;
         this.empresa = empresa;
         this.periodo = periodo;
