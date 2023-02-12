@@ -1,0 +1,159 @@
+[debug] [2023-02-12T18:37:26.451Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:37:26.454Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-02-12T18:37:26.456Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:37:26.456Z] Platform:      win32
+[debug] [2023-02-12T18:37:26.456Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:37:26.457Z] Time:          Sun Feb 12 2023 15:37:26 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:37:26.458Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=309937379&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-02-12T18:37:40.678Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-02-12T18:37:40.678Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-02-12T18:37:41.089Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2023-02-12T18:37:41.089Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[info] 
+[info] +  Success! Logged in as martinflazo@gmail.com 
+[debug] [2023-02-12T18:37:51.142Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-02-12T18:45:01.257Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:45:01.260Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-12T18:45:01.261Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:45:01.261Z] Platform:      win32
+[debug] [2023-02-12T18:45:01.261Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:45:01.263Z] Time:          Sun Feb 12 2023 15:45:01 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:45:01.263Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-12T18:45:01.388Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-12T18:45:01.389Z] > authorizing via signed-in user (martinflazo@gmail.com)
+[debug] [2023-02-12T18:45:01.389Z] [iam] checking project frontend-argprog-martin-lazo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-12T18:45:01.393Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions [none]
+[debug] [2023-02-12T18:45:01.394Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions x-goog-quota-user=projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:45:01.394Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-12T18:45:23.047Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions
+[debug] [2023-02-12T18:45:23.049Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo [none]
+[debug] [2023-02-12T18:45:44.641Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:45:44.723Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo
+    at RetryOperation._fn (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project frontend-argprog-martin-lazo. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-02-12T18:46:10.730Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:46:10.733Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --no-localhost
+[debug] [2023-02-12T18:46:10.735Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:46:10.735Z] Platform:      win32
+[debug] [2023-02-12T18:46:10.735Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:46:10.736Z] Time:          Sun Feb 12 2023 15:46:10 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:46:10.737Z] ----------------------------------------------------------------------
+[debug] 
+[info] Already logged in as martinflazo@gmail.com
+[debug] [2023-02-12T18:46:20.966Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-02-12T18:46:29.884Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:46:29.888Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-02-12T18:46:29.889Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:46:29.890Z] Platform:      win32
+[debug] [2023-02-12T18:46:29.890Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:46:29.891Z] Time:          Sun Feb 12 2023 15:46:29 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:46:29.892Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-12T18:46:30.016Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-12T18:46:30.017Z] > authorizing via signed-in user (martinflazo@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  G:\xampp\htdocs\portfolio_angular
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-02-12T18:46:49.544Z] Using project from CLI flag: frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:46:49.548Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo [none]
+[debug] [2023-02-12T18:47:10.681Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:47:15.705Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-02-12T18:48:54.116Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:48:54.119Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-12T18:48:54.120Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:48:54.121Z] Platform:      win32
+[debug] [2023-02-12T18:48:54.121Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:48:54.122Z] Time:          Sun Feb 12 2023 15:48:54 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:48:54.123Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-12T18:48:54.241Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-12T18:48:54.243Z] > authorizing via signed-in user (martinflazo@gmail.com)
+[debug] [2023-02-12T18:48:54.243Z] [iam] checking project frontend-argprog-martin-lazo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-12T18:48:54.247Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions [none]
+[debug] [2023-02-12T18:48:54.248Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions x-goog-quota-user=projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:48:54.248Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-12T18:49:15.365Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions
+[debug] [2023-02-12T18:49:15.368Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo [none]
+[debug] [2023-02-12T18:49:15.718Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo 200
+[debug] [2023-02-12T18:49:15.719Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo {"projectId":"frontend-argprog-martin-lazo","projectNumber":"191385742856","displayName":"frontend ArgProg Martin Lazo","name":"projects/frontend-argprog-martin-lazo","resources":{"hostingSite":"frontend-argprog-martin-lazo"},"state":"ACTIVE","etag":"1_a2e6c922-b497-4a14-9d7f-b42d98121f5a"}
+[info] 
+[info] === Deploying to 'frontend-argprog-martin-lazo'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-02-12T18:49:15.730Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/frontend-argprog-martin-lazo/versions [none]
+[debug] [2023-02-12T18:49:15.731Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/frontend-argprog-martin-lazo/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-02-12T18:49:42.131Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-02-12T18:51:52.984Z] ----------------------------------------------------------------------
+[debug] [2023-02-12T18:51:52.988Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-12T18:51:52.989Z] CLI Version:   11.20.0
+[debug] [2023-02-12T18:51:52.989Z] Platform:      win32
+[debug] [2023-02-12T18:51:52.989Z] Node Version:  v18.13.0
+[debug] [2023-02-12T18:51:52.991Z] Time:          Sun Feb 12 2023 15:51:52 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-02-12T18:51:52.991Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-12T18:51:53.114Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-12T18:51:53.115Z] > authorizing via signed-in user (martinflazo@gmail.com)
+[debug] [2023-02-12T18:51:53.115Z] [iam] checking project frontend-argprog-martin-lazo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-12T18:51:53.120Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions [none]
+[debug] [2023-02-12T18:51:53.120Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions x-goog-quota-user=projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:51:53.121Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-12T18:52:14.311Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/frontend-argprog-martin-lazo:testIamPermissions
+[debug] [2023-02-12T18:52:14.313Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo [none]
+[debug] [2023-02-12T18:52:35.911Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/frontend-argprog-martin-lazo
+[debug] [2023-02-12T18:52:40.921Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Martin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:564:17)
+    at process.processTimers (node:internal/timers:507:7)
+[error] 
+[error] Error: An unexpected error has occurred.
