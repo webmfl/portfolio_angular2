@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokenService } from 'src/app/services/token.service';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   
   isLogged = false;
 
-  constructor(private tokenService: TokenService) { }
+  constructor(private tokenService: TokenService,
+              private _router: Router) { }
 
   ngOnInit() {
     
@@ -25,8 +27,9 @@ export class HeaderComponent implements OnInit {
   }
 
   public logOut(): void {
-    
+    this.isLogged = false;
     window.sessionStorage.clear();
+    
   
   }
 

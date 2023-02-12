@@ -56,7 +56,9 @@ export class ModalComponent implements OnInit {
     return this.form.get('password');
   }
 
-  
+  homeClick() {
+    this.ruta2.navigate(['/home']);
+  }
 
   onEnviar(event: Event) {
     

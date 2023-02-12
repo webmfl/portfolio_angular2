@@ -30,7 +30,10 @@
             <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña es requerida</p>
           </div>
         </div>
-        <button type="submit" class="w-100 mb-2 btn btn-lg rounded-3 btn-primary">Ingresar</button>
+        <div class="d-flex justify-content-center">
+          <button type="submit" style="margin-right: 10px; width: 40%;" class="mb-2 btn btn-lg rounded-3 btn-primary">Ingresar</button>
+          <button type="submit" style="width: 40%;" class="mb-2 btn btn-lg rounded-3 btn-info" (click)="homeClick()">Inicio</button>
+        </div>
       </form>
   <!-- </div> -->
 </div>

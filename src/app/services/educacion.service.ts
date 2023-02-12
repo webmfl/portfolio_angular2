@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { Educacion } from '../models/educacion';
 
 @Injectable({
   providedIn: 'root'
@@ -9,17 +10,29 @@ export class EducacionService {
   
   url = "https://be-argpro.onrender.com/edu/";
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
 
-  // obtenerDatos():Observable<any> {
-  //   return this.http.get('./assets/data/edu.json');
-  // }
-obtenerDatos():Observable<any> {
-
+  public nuevo(educacion: Educacion):Observable<any> {
+    return this.httpClient.post<any>(this.url + 'nuevo', educacion);
+   }
   
+   public update(id: number, educacion: Educacion):Observable<any> {
+    return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
+   }
+  
+   public delete(id: number):Observable<any> {
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
+   }
     
-    return this.http.get<any>(this.url+"list")
+    obtenerDatos():Observable<any> {
+      
+      return this.httpClient.get<any>(this.url+"list").pipe(map(data => {
+        sessionStorage.setItem('currentUser', JSON.stringify(data));
+        return data;
+  
+    }))
+  
+    }}
+  
+  
 
-  }
-
-}
