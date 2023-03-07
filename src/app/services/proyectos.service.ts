@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-import { Educacion } from '../models/educacion';
+import { Proyectos } from '../models/proyectos';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EducacionService {
+export class ProyectosService {
   
-  url = "https://portfolioml.azurewebsites.net/edu/";
+  url = "https://portfolioml.azurewebsites.net/pro/";
 
   constructor(private httpClient:HttpClient) { }
 
-  public nuevo(educacion: Educacion):Observable<any> {
-    return this.httpClient.post<any>(this.url + 'nuevo', educacion);
+  public nuevo(proyectos: Proyectos):Observable<any> {
+    return this.httpClient.post<any>(this.url + 'nuevo', proyectos);
    }
   
-   public update(id: number, educacion: Educacion):Observable<any> {
-    return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
+   public update(id: number, proyectos: Proyectos):Observable<any> {
+    return this.httpClient.put<any>(this.url + `update/${id}`, proyectos);
    }
   
    public delete(id: number):Observable<any> {
@@ -33,6 +33,3 @@ export class EducacionService {
     }))
   
     }}
-  
-  
-

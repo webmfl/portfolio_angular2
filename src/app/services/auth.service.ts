@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../models/nuevo-usuario';
 })
 export class AuthService {
 
-  authURL = 'https://be-argpro.onrender.com/auth/';
+  authURL = 'https://portfolioml.azurewebsites.net/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

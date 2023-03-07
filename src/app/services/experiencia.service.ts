@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
 
-  url = "https://be-argpro.onrender.com/exp/";
+  url = "https://portfolioml.azurewebsites.net/exp/";
 
   constructor(private httpClient: HttpClient) { }
 

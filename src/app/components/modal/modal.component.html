@@ -1,8 +1,9 @@
 <!-- Modal -->
 <div class="container">
+  
   <!-- <div class="abs-center"> -->
-     <div class="col-6 mx-auto">
-      <h5 class="mt-5 mb-3 text-center">Ingreso</h5>
+     <div class="col-4 mx-auto">
+      <h5 class="m-4 text-center">Ingreso</h5>
       <form [formGroup]="form" class="" name="login" (ngSubmit)="onEnviar($event)">
         <div class="form-floating mb-3">
           <!-- Se configura el campo nombreUsuario del form reactivo para que responda a los errores-->
@@ -30,9 +31,15 @@
             <p *ngIf="Password?.hasError('required')" class="text-danger">La contraseña es requerida</p>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
-          <button type="submit" style="margin-right: 10px; width: 40%;" class="mb-2 btn btn-lg rounded-3 btn-primary">Ingresar</button>
-          <button type="submit" style="width: 40%;" class="mb-2 btn btn-lg rounded-3 btn-info" (click)="homeClick()">Inicio</button>
+        <div class="col-6 mx-auto">
+          <div class="row justify-content-center">
+            <button type="submit" class="col m-2 btn btn-lg rounded-3 btn-info text-wrap" (click)="homeClick()">Inicio</button>
+            <button type="submit" class="col m-2 btn btn-lg rounded-3 btn-primary text-wrap">LogIn</button>
+          </div>
+          <div class="row text-center">
+            <app-spinner></app-spinner>
+          </div>
+          
         </div>
       </form>
   <!-- </div> -->

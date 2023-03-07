@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { interceptorProvider } from './interceptors/experiencia-interceptor.service';
 
@@ -18,13 +18,11 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-
-
-
-
-
-
+import { SpinnerComponent } from "./components/spinner/spinner.component";
+import { SpinnerModule } from './components/spinner/spinner.module';
+import { SpinnerInterceptorService } from './interceptors/spinner-interceptor';
+import { HabilidadesComponent } from './components/habilidades/habilidades.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 
 @NgModule({
@@ -36,11 +34,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     SobremiComponent,
     CuatroComponent,
-    HomeComponent
-    
-    
-
-    
+    HomeComponent,
+    SpinnerComponent,
+    HabilidadesComponent,
+    ProyectosComponent
     
   ],
   imports: [
@@ -50,12 +47,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FontAwesomeModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
+    SpinnerModule,
     NgbModule,
-    FormsModule
+    FormsModule,   
     
     
   ],
-  providers: [interceptorProvider,{provide:LocationStrategy, useClass:HashLocationStrategy}],
+  providers: [interceptorProvider,{provide:LocationStrategy, useClass:HashLocationStrategy},
+              {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
